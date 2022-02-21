@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Diagnostics;
 using System.IO;
@@ -49,13 +48,14 @@ namespace DictionaireTP1
                         Console.WriteLine((globale.IndexOf(item) + 1) +" : " +ligne + " => "
                                                 + BitConverter.ToString(item).ToLower().Replace("-", ""));
                     }
-                    //Console.WriteLine(sr.ReadLine());
                 }
             }
             stopWatch.Stop();
             Console.WriteLine(stopWatch.Elapsed);
             Console.ReadLine();
         }
+
+        //fonction qui permet de comparer les mots de passe générés aux mots de passe désirés
         static bool matches(byte[] a, byte[] b)
         {
             for (int i = 0; i < 16; i++)
@@ -64,7 +64,7 @@ namespace DictionaireTP1
             return true;
         }
 
-
+        //décompose la chaine de charactère hexadecimal en un tableau de byte pour pouvoir utiliser.
         static byte[] StringHashToByteArray(string s)
         {
             return Enumerable.Range(0, s.Length / 2).Select(i => (byte)Convert.ToInt16(s.Substring(i * 2, 2), 16)).ToArray();
