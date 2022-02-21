@@ -50,7 +50,7 @@ class Program
                 byte[] password = new byte[1];
                 password[0] = (byte)Characters[i];
                 hash = sha.ComputeHash(password);
-                if (matches(one, hash) || matches(two, hash) || matches(three, hash) || matches(four,hash) || matches(five,hash))
+                if (matches(one, hash) || matches(two, hash) || matches(three, hash) || matches(four, hash) || matches(five, hash))
                 {
                     Console.WriteLine(Encoding.ASCII.GetString(password) + " => "
                         + BitConverter.ToString(hash).ToLower().Replace("-", ""));
@@ -155,7 +155,7 @@ class Program
 
             byte[] password = new byte[5];
             byte[] hash;
-            
+
 
             password[0] = (byte)Characters[i];
             using (MD5 sha = MD5.Create())
@@ -179,8 +179,8 @@ class Program
                                         + BitConverter.ToString(hash).ToLower().Replace("-", ""));
 
                                 }
-                                    
-                                
+
+
                             }
                         }
                     }

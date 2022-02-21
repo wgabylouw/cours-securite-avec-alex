@@ -3,8 +3,6 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>BruteforceTP1_Alex_Gab</RootNamespace>
-    <AssemblyName>BruteforceTP1_Alex_Gab</AssemblyName>
   </PropertyGroup>
 
 </Project>
